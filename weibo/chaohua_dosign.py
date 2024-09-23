@@ -20,6 +20,7 @@ def get_super_info_list():
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
     }
+    print(cookies)
     response = requests.get('https://weibo.com/ajax/profile/topicContent?tabid=231093_-_chaohua', cookies=cookies,
                             headers=headers)
     if 'url' in response.text:
