@@ -104,6 +104,10 @@ def main():
 
 
 if __name__ == '__main__':
+    if os.getenv('SUB_TOKEN') == '':
+        print('请确保环境变量设置正确（SUB_TOKEN）')
+        exit()
+    
     cookies = {
         'SUB': os.getenv('SUB_TOKEN'),
     }
