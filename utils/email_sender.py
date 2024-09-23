@@ -20,8 +20,8 @@ def get_beijing_time():
 
 
 def send_QQ_email_plain(content):
-    sender = user = '1781259604@qq.com'
-    passwd = 'tffenmnkqsveccdj'
+    sender = user = '987923011@qq.com'
+    passwd = 'wyfddh123456'
 
     # 格式化北京时间为 "年-月-日 星期几 时:分" 格式
     formatted_date = get_beijing_time()
@@ -31,8 +31,8 @@ def send_QQ_email_plain(content):
 
     # 设置邮件主题为今天的日期和星期
     msg['From'] = f'{sender}'
-    msg['To'] = os.getenv('EMAIL_ADDRESS')
-    # msg['To'] = '3552971348@qq.com'
+    # msg['To'] = os.getenv('EMAIL_ADDRESS')
+    msg['To'] = '987923011@qq.com'
     msg['Subject'] = f'{formatted_date}'  # 设置邮件主题
 
     try:
@@ -43,8 +43,8 @@ def send_QQ_email_plain(content):
         smtp.login(user, passwd)
 
         # 发送邮件：发送方，接收方，发送的内容
-        smtp.sendmail(sender, os.getenv('EMAIL_ADDRESS'), msg.as_string())
-        # smtp.sendmail(sender, '3552971348@qq.com', msg.as_string())
+        # smtp.sendmail(sender, os.getenv('EMAIL_ADDRESS'), msg.as_string())
+        # smtp.sendmail(sender, '987923011@qq.com', msg.as_string())
 
         print('邮件发送成功')
 
