@@ -107,4 +107,5 @@ if __name__ == '__main__':
     cookies = {
         'SUB': os.getenv('SUB_TOKEN'),
     }
+    print(cookies)
     main()
