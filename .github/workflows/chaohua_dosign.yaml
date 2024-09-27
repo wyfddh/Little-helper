@@ -8,7 +8,7 @@ name: ch_dosing
 #    - cron: '50 10 * * *' # 10对应的是北京时间晚上六点 50是分钟 表示每天晚上六点五十执行，可以改成任意时间测试
 #
 on:
-  workflow_dispatch:  # 允许手动触发
+  # workflow_dispatch:  # 允许手动触发
   schedule: # 每天下午12点执行 时差为 +8
     - cron: '* 04 * * *'
 
